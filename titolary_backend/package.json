@@ -1,0 +1,40 @@
+{
+  "name": "titolari",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@typegoose/typegoose": "^6.0.4",
+    "@types/express": "^4.17.1",
+    "@types/moment": "^2.13.0",
+    "@types/mongoose": "^5.5.22",
+    "@types/node": "^12.11.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.6.1",
+    "fuse.js": "^3.4.5",
+    "jssoup": "^0.0.10",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.5",
+    "node-fetch": "^2.6.0",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "^3.6.4",
+    "xpath": "^0.0.27"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "found": "tsc && node dist/entities/foundations/build_foundations.js && node dist/entities/suppliers/init_source_list.js && node dist/updater/lineups/collector.js",
+    "quick_update": "tsc && node dist/updater/lineups/collector.js ",
+    "slow_update": "tsc && node dist/updater/calendar/collector.js && node dist/updater/leaderboard/collector.js ",
+    "serve_prod": "tsc && node dist/front/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "titolary.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
